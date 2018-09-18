@@ -38,4 +38,3 @@ public class scanner_intro {
 			input.close(); }
 		}
 	}
-	

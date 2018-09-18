@@ -2,8 +2,7 @@ package projects;
 
 import java.util.Scanner;
 public class calc {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println("Enter first and second number:");
         // Get user input
         Scanner inp= new Scanner(System.in);
@@ -42,5 +41,4 @@ public class calc {
         inp.close();
 
     }
-
 }
