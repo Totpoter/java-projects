@@ -15,8 +15,7 @@ public class scanner_intro {
 		String adress=input.nextLine();
 		/* Telefonnummer input */
 		System.out.println("Vad är ditt telefonnummer?");
-		int telenmr=input.nextInt();
-		input.nextLine();
+		String telenmr=input.nextLine();
 		/* Klass input */
 		System.out.println("Vilken klass går du i?");
 		String klass=input.nextLine();
@@ -28,9 +27,27 @@ public class scanner_intro {
 		 if(adress.isEmpty()) {
 			 System.out.println("Du måste skriva in din adress."); 
 			 works=false;}
-		 if(telenmr == 0) {
+		 if(telenmr.isEmpty()) {
 			 System.out.println("Du måste skriva in ditt telefonnummer."); 
 			 works=false;}
+		 boolean numberWorks = true;
+		 if(telenmr.length() != 10) {
+			 System.out.println("WoooooooooooooooooooW");
+			 works = false;
+		 }
+		 for(int i = 0; i < telenmr.length(); i++)
+		 {
+			 if(!Character.isDigit(telenmr.charAt(i)))
+			 {
+				 numberWorks = false;
+			 }
+		 }
+		 
+		 if(!numberWorks) {
+			 System.out.println("WooooooW");
+			 works = false;
+		 }
+		 
 		 if(klass.isEmpty()) {
 			 System.out.println("Du måste skriva in din klass."); 
 			 works=false;}
