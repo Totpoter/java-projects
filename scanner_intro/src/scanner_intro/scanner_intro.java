@@ -1,4 +1,3 @@
-/* TODO Fixa så att man bara kan skriva nummer i telenmr*/
 package scanner_intro;
 
 import java.util.Scanner;
@@ -31,7 +30,7 @@ public class scanner_intro {
 			 System.out.println("Du måste skriva in ditt telefonnummer."); 
 			 works=false;}
 		 /* Kolla så att telefonnummer har 10 siffror i sig*/
-		 boolean numberWorks = true;
+		boolean numberWorks = true;
 		 if(telenmr.length() != 10) {
 			 System.out.println("Ditt telefonnummer måste ha 10 siffror.");
 			 works = false;
@@ -44,12 +43,10 @@ public class scanner_intro {
 				 numberWorks = false;
 			 }
 		 }
-		 
 		 if(!numberWorks) {
-			 System.out.println("Ditt telefonnummer kan endast ha siffror i sig.");
-			 works = false;
-		 }
-		 
+		 System.out.println("Ditt telefonnummer kan endast ha siffror i sig.");
+		 works = false;
+	 	 }
 		 if(klass.isEmpty()) {
 			 System.out.println("Du måste skriva in din klass."); 
 			 works=false;}
