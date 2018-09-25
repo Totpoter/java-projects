@@ -11,7 +11,7 @@ public class calc {
         num1 = inp.nextDouble();
         num2 = inp.nextDouble();
         } catch(Exception e) {
-        	System.out.println("Not a number");
+        	System.out.println("Not a Number");
         	inp.close();
         	return;
         }
