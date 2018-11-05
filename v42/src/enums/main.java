@@ -1,7 +1,7 @@
 package enums;
 
 public class main {
-	double G = 9.82;
+	double G = 6.673 * Math.pow(10, -11);
 	double R = 8.314;
 	double p_0 = 1000;
 	double c = 299.792;
@@ -9,14 +9,30 @@ public class main {
 public static void main(String[] args) {
 	
 }
+/** 
+ * Converts fahrenheit to celsius
+ * @param fahrenheit Value to be converted to celsius
+ * @return Returns the result
+ */
 double fahrenheitToCelsius(double fahrenheit) {
-
+	return (fahrenheit - 32) / 1.8;
 }
+/**
+ * 
+ * @param kelvin Value to be converted to celsius
+ * @return Returns the result
+ */
 double kelvinToCelsius(double kelvin) {
-	
+	return kelvin - 273.15;
 }
+    /**
+     * Calculates fluid pressure on a certain depth
+     * @param fluid The fluid
+     * @param deep The depth
+     * @return Pressure value
+     */
 double fluidPressure(FluidTable fluid, double deep) {
-	
+	return fluid.density * G * deep;
 }
 double pressureUnderWater(double deep) {
 	
