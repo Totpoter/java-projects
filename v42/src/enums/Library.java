@@ -1,6 +1,11 @@
 package enums;
 
 public class Library {
+	public static double G = 6.673 * Math.pow(10, -11);
+	public static double R = 8.314;
+	public static double p_0 = 1000;
+	public static double c = 299.792;
+	public static double g_swe = 9.82;
 /** 
  * Converts fahrenheit to celsius
  * @param fahrenheit Value to be converted to celsius
@@ -24,11 +29,22 @@ double kelvinToCelsius(double kelvin) {
      * @return Pressure value
      */
 public static double fluidPressure(FluidTable fluid, double deep) {
-	return fluid.density * G * deep;
+	return fluid.density * g_swe * deep;
 }
+/**	
+ * Calculates water pressure on a certain depth
+ * @param deep the depth
+ * @return
+ */
 public static double pressureUnderWater(double deep) {
-	
+return fluidPressure(FluidTable.WATER, deep);	
 }
+/**	
+ * 
+ * @param mass
+ * @param velocity
+ * @return
+ */
 public static double kineticEnergy(double mass, double velocity) {
 	
 }
