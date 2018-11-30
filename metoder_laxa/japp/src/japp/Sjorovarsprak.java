@@ -1,7 +1,8 @@
-public class sjörövarspråk {
+package japp;
+public class Sjorovarsprak {
 	public static void main(String[] args) {
 		System.out.println(sjorovare("mening på sjörövarspråket"));
-		
+			
 	}
 	public static String sjorovare(String str) {
 		char match[] = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'z', 'x'};
