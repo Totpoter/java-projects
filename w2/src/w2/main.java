@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class main {
 
+	//Skapa variabler för att hålla koll på svårighetsgraden och spelet i sig
     public static final int DIFFICULTY_EASY = 1;
     public static final int DIFFICULTY_NORMAL = 2;
     public static final int DIFFICULTY_HARD = 3;
@@ -14,6 +15,7 @@ public class main {
     public static int totalGuesses = 0;
     public static int currentGameGuesses = 0;
 
+    //Skapa en metod för att sätta ett nummer i relevans till svårighetsgraden
     private static int getDifficultyHigh(int difficulty) {
         int result = 100;
 
@@ -36,5 +38,27 @@ public class main {
         }
 
         return result;
+    }
+    private static int Random(int difficulty) {
+        int high = DifficultyHigh(difficulty);
+        int result = (int) (Math.random() * high);
+
+        return result;
+    }
+    //Skapa metoden som ändrar svårighetsgraden ifall spelaren vill spela igen
+    private static int CorrectGuess(Scanner scanner, boolean newDifficulty) {
+        if(newDifficulty) {
+            System.out.println("Difficulty: ");
+            System.out.printf("\tEasy: %d\n", DIFFICULTY_EASY);
+            System.out.printf("\tNormal: %d\n", DIFFICULTY_NORMAL);
+            System.out.printf("\tHard: %d\n", DIFFICULTY_HARD);
+            System.out.printf("\tSuper Hard: %d\n", DIFFICULTY_SUPER_HARD);
+
+            currentDifficulty = scanner.nextInt();
+        }
+
+        int correctGuess = getRandomValue(currentDifficulty);
+
+        return correctGuess;
     }
 }
